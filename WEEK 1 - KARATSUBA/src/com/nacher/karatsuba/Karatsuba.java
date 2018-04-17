@@ -34,7 +34,6 @@ public class Karatsuba {
 		public static BigInteger multiplication(BigInteger x, BigInteger y) {
 			if (x.bitLength() <= CUTOFF || y.bitLength() <= CUTOFF) {  // Base case, executed when numbers are small enough
 				return x.multiply(y);
-				
 			} else {
 				int n = Math.max(x.bitLength(), y.bitLength());
 				int half = (n + 32) / 64 * 32;  // Middle point of the point, point where we 'split' the numbers for the multiplication
@@ -54,7 +53,7 @@ public class Karatsuba {
 			}
 		}
 	
-	public static void main (String[] args) throws InterruptedException {
+	public static void main (String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Test of the Karatsuba multiplication algorithm\n");
 		/** Accept two integers, inputed by keyboard **/
