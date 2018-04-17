@@ -31,15 +31,6 @@ public class Karatsuba {
 	// ATTENTION: CUTOFF should be greater or equal to 32. Otherwise, an infinite recursion will occur.
 		private static final int CUTOFF = 32;
 		
-		
-		/**
-		 * Returns {@code x.multiply(y)}, the product of the specified integers.
-		 * {@code x * y} is faster, but can't be used on the BigInteger data type.
-		 * @param x a multiplicand
-		 * @param y a multiplicand
-		 * @return {@code x} times {@code} y
-		 * @throws NullPointerException if {@code x} or {@code y} is {@code null}
-		 */
 		public static BigInteger multiplication(BigInteger x, BigInteger y) {
 			if (x.bitLength() <= CUTOFF || y.bitLength() <= CUTOFF) {  // Base case, executed when numbers are small enough
 				return x.multiply(y);
