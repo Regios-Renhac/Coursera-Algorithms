@@ -21,9 +21,11 @@ public class Inversions {
 	    
 	    System.arraycopy(inputArray, 0, leftArray, 0, leftArray.length);
 	    System.arraycopy(inputArray, leftArray.length, rightArray, 0, rightArray.length);
+	    
 	    divideAndConquer(leftArray);
 	    divideAndConquer(rightArray);
 	    sortAndMerge(leftArray, rightArray, inputArray);
+	    
 	    return inputArray;
 	}
 
@@ -34,6 +36,7 @@ public class Inversions {
 		int i = 0;
 		int j = 0;
 		int k = 0;
+		
 		while(i < leftArrayLength && j < rightArrayLength) {
 			if(leftArray[i] < rightArray[j]) {
 				sortedArray[k] = leftArray[i];
@@ -46,11 +49,13 @@ public class Inversions {
 			}
 			k++;
 		}
+		
 		while(i < leftArrayLength) {
 			sortedArray[k] = leftArray[i];
 			i++;
 			k++;
 		}
+		
 		while(j < rightArrayLength) {
 			sortedArray[k] = rightArray[j];
 			j++;
@@ -61,6 +66,7 @@ public class Inversions {
     // This method counts the lines in the file to calculate the required size of the input array
     public static int countLines(String filename) throws IOException {
         InputStream is = new BufferedInputStream(new FileInputStream(filename));
+	    
         try {
             byte[] c = new byte[1024];
             int count = 0;
