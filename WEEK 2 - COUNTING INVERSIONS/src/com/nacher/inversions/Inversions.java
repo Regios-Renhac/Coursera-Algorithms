@@ -1,3 +1,16 @@
+/**
+ * Algorithms Part 1
+ * Week 2 assignment
+ * Sergio Nacher Fernández
+ * The file contains all the 100,000 integers between 1 and 100,000 (including both) in some random order( no integer is repeated).
+ *
+ * Your task is to find the number of inversions in the file given (every row has a single integer between 1 and 100,000).
+ * Assume your array is from 1 to 100,000 and ith row of the file gives you the ith entry of the array.
+ * Write a program and run over the file given. The numeric answer should be written in the space.
+ * So if your answer is 1198233847, then just type 1198233847 in the space provided without any space / commas / any other punctuation marks.
+ *
+ */
+ 
 package com.nacher.inversions;
 
 import java.io.*;
