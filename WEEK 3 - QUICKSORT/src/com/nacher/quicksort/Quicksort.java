@@ -45,6 +45,7 @@ import java.util.*;
 
 public class Quicksort {
 
+	// Perform the Quicksort algorithm
 	private static int qSort(int[] array, int begin, int end, PivotPicker picker) {
 		// End condition
 		if (end - begin < 2) {
