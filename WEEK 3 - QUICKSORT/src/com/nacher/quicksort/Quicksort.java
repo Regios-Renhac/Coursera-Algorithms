@@ -195,17 +195,17 @@ public class Quicksort {
 		// 1st part: using the first element as the pivot
 		int inputArray1[] = getArray(filename);
 		int sortCount1 = qSort(inputArray1, 0, inputArray1.length, new FirstElementPivotPicker());
-		System.out.println(sortCount1);
+		System.out.println("First element pivot quicksort result: " + sortCount1);
 		
 		// 2nd part: using the last element as the pivot
 		int inputArray2[] = getArray(filename);
 		int sortCount2 = qSort(inputArray2, 0, inputArray2.length, new LastElementPivotPicker());
-		System.out.println(sortCount2);
+		System.out.println("Last element pivot quicksort result: " + sortCount2);
 		
 		// 3rd part: using the median of three for determining the pivot
 		int inputArray3[] = getArray(filename);
 		int sortCount3 = qSort(inputArray3, 0, inputArray3.length, new MedianOfThreePivotPicker());
-		System.out.println(sortCount3);
+		System.out.println("Median of three pivot quicksort result: " + sortCount3);
 	}
 
 }
