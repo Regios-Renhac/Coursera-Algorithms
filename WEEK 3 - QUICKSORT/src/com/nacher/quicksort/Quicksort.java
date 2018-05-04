@@ -1,7 +1,7 @@
 /**
  * Algorithms Part 1
  * Week 3 assignment
- * Sergio Nacher Fern·ndez
+ * Sergio Nacher Fern√°ndez
  * 
  * The included file contains all of the integers between 1 and 10,000 (inclusive) in unsorted order (with no integer repeated).
  * The integer in the ith row of the file gives you the ith entry of an input array.
@@ -62,6 +62,7 @@ public class Quicksort {
 		void moveToFront(int[] array, int begin, int end);
 	}
 
+	// Pick the first element in the array and use it as pivot
 	private static class FirstElementPivotPicker implements PivotPicker {
 		@Override
 		public void moveToFront(int[] array, int begin, int end) {
@@ -69,6 +70,7 @@ public class Quicksort {
 		}
 	}
 
+	// Pick the last element in the array and use it as pivot
 	private static class LastElementPivotPicker implements PivotPicker {
 		@Override
 		public void moveToFront(int[] array, int begin, int end) {
@@ -79,6 +81,8 @@ public class Quicksort {
 		}
 	}
 
+	// Find the median of three between the first, last and middle elements
+	// in the array and use it as pivot
 	private static class MedianOfThreePivotPicker implements PivotPicker {
 		@Override
 		public void moveToFront(int[] array, int begin, int end) {
@@ -108,6 +112,8 @@ public class Quicksort {
 		}
 	}
 
+	// This method partitions the array according to the pseudocode
+	// in the lesson slides
 	private static int partition(int[] array, int begin, int end) {
 		int pivot = array[begin];
 		int pivotPosition = begin;
