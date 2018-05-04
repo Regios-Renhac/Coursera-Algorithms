@@ -130,12 +130,12 @@ public class Karger {
 	}
 
 	// Reads the graph and translates it into a hashmap
-	private static HashMap<Integer, ArrayList<Integer>> readGraphFromFile() {
+	private static HashMap<Integer, ArrayList<Integer>> readGraphFromFile(String filename) {
 		HashMap<Integer, ArrayList<Integer>> graph = new HashMap<Integer, ArrayList<Integer>>();
 
 		FileInputStream fstream = null;
 		try {
-			fstream = new FileInputStream("C:\\Users\\Sergio Nacher\\Documents\\Java\\WEEK 4 - KARGER CUT\\src\\com\\nacher\\kargercut\\kargerMinCut.txt");
+			fstream = new FileInputStream(filename);
 
 			// Get the object of DataInputStream
 			DataInputStream in = new DataInputStream(fstream);
@@ -175,7 +175,8 @@ public class Karger {
 
 	public static void main(String[] args) {
 		// Read the graph from the text file
-		HashMap<Integer, ArrayList<Integer>> originalGraph = readGraphFromFile();
+		String filename = "C:\\Users\\Sergio Nacher\\Documents\\Java\\WEEK 4 - KARGER CUT\\src\\com\\nacher\\kargercut\\kargerMinCut.txt";
+		HashMap<Integer, ArrayList<Integer>> originalGraph = readGraphFromFile(filename);
 
 		int minCut = 0;
 
